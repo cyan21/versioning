@@ -28,6 +28,8 @@ func ExampleNewer() {
   sv := SemVer20{Major: 0, Minor: 0, Patch: 0, Maturity: ""}
   fmt.Println(sv.IsNil())
 
+  fmt.Println(sv1.Print())
+
   // Output:
   // 0  
   // 0  
@@ -35,5 +37,6 @@ func ExampleNewer() {
   // 1  
   // 2
   // true 
+  // 0.2.0-alpha 
 
 }

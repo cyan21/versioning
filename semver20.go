@@ -1,5 +1,9 @@
 package versioning 
 
+import (
+    "strconv"
+)
+
 var MaturityLevels = map[string]int { 
   "alpha" : 0,
   "beta" : 1, 
@@ -48,3 +52,7 @@ func (v SemVer20) IsNil() bool {
   return v.Major == 0 && v.Minor == 0 && v.Patch == 0
 }
 
+func (v SemVer20) Print() string {
+  return strconv.Itoa(v.Major) + "." + strconv.Itoa(v.Minor) + "." + strconv.Itoa(v.Patch)
+// + "-" + v.Maturity
+}
